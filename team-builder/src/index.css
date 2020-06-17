@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(80,50,60);
+  background-color: rgb(170,250,50);
+  color: black;
 }
 
 code {
@@ -13,3 +14,55 @@ code {
     monospace;
 }
 
+.createNote{
+  background-color:white;
+  width: 300px;
+  border-radius: 25px;
+  padding: 20px;
+  color: green;
+  font-style: italic;
+  border: black 2px solid;
+  font-size: 14px;
+}
+
+.notesContainer{
+  display: flex;
+  justify-content:center;
+  margin: 100px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.inputEmail{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+.inputName{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+
+}
+label{
+  font-size: 1.2rem;
+  font-weight:bold;
+}
+.role{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+.button{
+  width: 400px;
+  padding: 10px;
+  align-self: center;
+  margin: 30px;
+  background-color: lightpink;
+  color: darkviolet;
+  font-size: 1.1rem;
+}
