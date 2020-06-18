@@ -71,3 +71,13 @@ label{
   color: black;
   font-size: 1.1rem;
 }
+.textArea{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+
+#root > div > div > div:nth-child(1){
+  display: none;
+}

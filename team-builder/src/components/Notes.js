@@ -9,6 +9,7 @@ function Notes(props) {
             <h2>{item.Name}</h2>
             <h2>{item.Email}</h2>
             <h2>{item.Role}</h2>
+            <h2>{item.Motivation}</h2>
           </div>
         );
       })}

@@ -3,20 +3,36 @@ import logo from "./logo.svg";
 import "./App.css";
 import Notes from "./components/Notes.js";
 import NoteForm from "./components/NoteForm";
+import { date } from "yup";
 
 function App() {
   const [members, setMembers] = useState([
     {
       id: 1,
-      Name: "Lynda Santiago",
+      Name: "Lynda Santiagoo",
       Email: "Lsantiago1091@yahoo.com",
       Role: "Full Stack Web Developer",
+      Motivation:
+        "I want to be able to build functional apps with amazing UI's",
     },
   ]);
 
 
-  
 
+
+
+// ! A DIFFERENT WAY BELOW
+  
+  // const addNewPerson=(person)=>{
+  //   const newPerson ={
+  //     id: Date.now(),
+  //     Name: person.Name,
+  //     Email: person.Email,
+  //     Role: person.Role,
+  //     Motivation: person.Motivation
+  //   }
+  //   setMembers([...members, newPerson])
+  // }
 
   return (
     <div className="App">
@@ -25,8 +41,9 @@ function App() {
         <br />
         Please fill this Form below! 😎🤑
       </h1>
-      <NoteForm members={members} setMembers={setMembers}/>
-      <Notes members={members}/>
+     {/* A DIFFERENT WAY <NoteForm addNewPerson={addNewPerson}/>   */}
+      <NoteForm members={members} setMembers={setMembers} />
+      <Notes members={members} />
     </div>
   );
 }
