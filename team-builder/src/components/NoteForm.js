@@ -1,67 +1,63 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
+
+function NoteForm(props) {
+  const [newTeamMember, setNewTeamMember] = useState({
+    Name: "",
+    Email: "",
+    Role: "",
+  });
+
+  const handleChanges = (event) => {
+   setNewTeamMember({...newTeamMember, [event.target.name]: event.target.value}); //this updates our state when typing in inputs
+    //value becomes whatever you enter in inputs
+    console.log(event.target.value)
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.setMembers([...props.members, newTeamMember])
+   
+  };
 
 
 
-function NoteForm({addNewNote}){
 
-    const [note, setNote]=useState({Name:"", Email:"", Role:""});
+  //   const reset = (event) => {
+  //     event.setTeamMember(teamMember);
+  //   };
 
-    const handleChanges = (event)=>{
-    setNote({...note, [event.target.name]: event.target.value })
-    }
-    
-    const submitForm = event => {
-        console.log(event.target.value);
-        event.preventDefault();
-        addNewNote(note);
-        setNote({ Name: "", Email: "", Role: "" });
-      };
+  return (
+    <form className="form" onSubmit={handleSubmit}>
+      <label htmlFor="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter Name here"
+        name="Name"
+        className="inputName"
+        onChange={handleChanges}
+      />
+      <label htmlFor="email">Email</label>
+      <input
+        id="email"
+        type="textarea"
+        placeholder="Enter Email Here"
+        name="Email"
+        className="inputEmail"
+        onChange={handleChanges}
+      />
+      <label htmlFor="role">Role</label>
+      <select id="role" className="role" name="role" onChange={handleChanges}>
+        <option>Full Stack Web Developer</option>
+        <option>Front End Engineer</option>
+        <option>Back End Engineer</option>
+      </select>
 
-return(
-
-    <form className="form" onSubmit={submitForm}>
-    <label htmlFor="name">Name</label>
-    <input
-    id="name"
-    type="text"
-    placeholder="Enter Name here"
-    name="Name"
-    className="inputName"
-    onChange={handleChanges}
-    value={note.Name}
-
-    />
-    <label htmlFor="email">Email</label>
-    <input
-    id="email"
-    type="textarea"
-    placeholder="Enter Email Here"
-    name="Email"
-    className="inputEmail"
-    onChange={handleChanges}
-    value={note.Email}
-
-    />
-    <label htmlFor="role">Role</label>
-    <select id="role" className="role" name="role" onChange={handleChanges}>
-    <option value={note.Role}>Full Stack Web Developer</option>
-    <option value={note.Role}>Front End Engineer</option>
-    <option value={note.Role}>Back End Engineer</option>
-    </select>
-
-    <button className="button" type="submit">
+      <button className="button" type="submit">
         Submit
-    </button>
-
+      </button>
     </form>
-
-
-
-)
-
-
-
-
+  );
 }
 
-export default NoteForm
+export default NoteForm;

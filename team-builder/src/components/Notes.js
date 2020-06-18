@@ -1,28 +1,18 @@
-import React from 'react'
+import React from "react";
 
-
-function Notes(props){
-
-return (
-
-   <div className="notesContainer">
-       {props.notes.map(item =>{
-           return (
-        <div className="createNote">
+function Notes(props) {
+  return (
+    <div className="notesContainer">
+      {props.members.map((item) => {
+        return (
+          <div className="createNote" key={item.id}>
             <h2>{item.Name}</h2>
             <h2>{item.Email}</h2>
             <h2>{item.Role}</h2>
-
-        </div>   
-           )
-       })}
-
-   </div>
-
-)
-
-
-
-
+          </div>
+        );
+      })}
+    </div>
+  );
 }
-export default Notes
+export default Notes;
