@@ -35,10 +35,10 @@ return(
     <input
     id="email"
     type="textarea"
-    placeholder="Enter Name here"
+    placeholder="Enter Email Here"
     name="Email"
     className="inputEmail"
-    onChange="handleChanges"
+    onChange={handleChanges}
     value={note.Email}
 
     />

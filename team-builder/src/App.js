@@ -25,7 +25,7 @@ function App() {
       Email: note.Email,
       Role: note.Role
     };
-    setNote([newNote, ...note]);
+    setNote([...note, newNote]);
     //we are declaring all this inside of a new array
     //...notes is whatever was previously inside of notes, plus whatever our newNote is
     //...spread operator takes any value thats inside of original array.
