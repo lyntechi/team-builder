@@ -26,8 +26,10 @@ code {
   font-style: italic;
   font-size: 14px;
   box-shadow: 6px 7px grey;
-  margin: 50px;
-}
+  margin: 20px;
+
+ 
+  }
 
 .notesContainer{
   display: flex;

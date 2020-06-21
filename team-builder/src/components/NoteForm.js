@@ -12,11 +12,6 @@ function NoteForm(props) {
     Terms: ""
   });
 
-
-
-
-
-
   //this is going to collect new information when user
   //enters inside of the diff inputs and then it will feed it to the empty strings
   //you see above inside of object
