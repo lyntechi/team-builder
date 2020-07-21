@@ -3,11 +3,14 @@ import styled from 'styled-components';
 
 
 const FormStyles = styled.div`
-font-size: 1.2rem;
+font-size: 1.4rem;
+padding: 20px;
+color: rgb(255, 187, 60);
 input{
     display: flex;
     margin: 0 auto;
-    margin-bottom: 20px;
+ 
+ 
 
 }
 button{
@@ -15,6 +18,10 @@ button{
     padding: 20px;
     width: 300px;
     font-size: 1.2rem;
+}
+select{
+    font-size: 1.2rem;
+    margin: 20px;
 }
 
 `
