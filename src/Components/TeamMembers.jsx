@@ -5,9 +5,12 @@ export default function TeamMembers(props){
 
     return(
         <div>
-            <p>Name: {teamMembers.Name}</p>
-            <p>Email: {teamMembers.Email}</p>
-            <p>Role: {teamMembers.Role}</p>
+            {teamMembers.map(item=>{
+                return <div key={item.id}> <p>Name: {item.Name}</p>
+                <p>Email: {item.Email}</p>
+                <p>Role: {item.Role}</p>
+                </div>
+            })}
         </div>
     )
 }
