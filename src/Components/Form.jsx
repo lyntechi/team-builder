@@ -5,23 +5,37 @@ import styled from 'styled-components';
 const FormStyles = styled.div`
 font-size: 1.4rem;
 padding: 20px;
-color: rgb(255, 187, 60);
+color: black;
 input{
     display: flex;
     margin: 0 auto;
- 
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 250px; 
  
 
 }
 button{
-    margin:  40px 0;
-    padding: 20px;
-    width: 300px;
-    font-size: 1.2rem;
+  padding:4%;
+  font-size:1.6rem;
+  text-transform:capitalize;
+  border:2px solid #000;
+  transition:3s;
+  margin:2%;
+  width: 230px;
+  :hover{
+    border:2px solid #fff;
+    color:#fff;
+    background-color:#000;
+  }
 }
 select{
     font-size: 1.2rem;
     margin: 20px;
+    padding: 10px;
+}
+h3{
+  margin-bottom: 30px;
 }
 
 `
@@ -48,11 +62,13 @@ export default function Form(props) {
  const onSubmit = (event) =>{
   event.preventDefault()
   createNote(newPerson)
+  setNewPerson({Name: "", Email:"", Role: ""})
  }
 
 
   return (
     <FormStyles>
+      <h3>Welcome To The Coolest Team!! 😜</h3>
       <form onSubmit={onSubmit}> 
         <label htmlFor="name">
           Name:

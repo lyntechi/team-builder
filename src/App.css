@@ -3,11 +3,12 @@
   margin: 0;
   max-width: 100%;
   box-sizing: border-box;
-  font-family: 'Changa', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
  
 }
 body{
-  background-color: rgb(37, 36, 36);
+  background-color: #FFE4B5;
+
 }
 .App {
   text-align: center;
