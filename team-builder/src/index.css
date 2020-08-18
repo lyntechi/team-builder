@@ -1,0 +1,85 @@
+*{
+  /* border: 2px red solid; */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(82, 212, 255);
+  color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.createNote{
+  background-color:rgb(250,250,72);
+  width: 300px;
+  padding: 20px;
+  color: black;
+  font-style: italic;
+  font-size: 14px;
+  box-shadow: 6px 7px grey;
+  margin: 20px;
+
+ 
+  }
+
+.notesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin: 100px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.inputEmail{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+.inputName{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+
+}
+label{
+  font-size: 1.2rem;
+  font-weight:bold;
+}
+.role{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+.button{
+  width: 400px;
+  padding: 10px;
+  align-self: center;
+  margin: 30px;
+  background-color: rgb(247, 121, 139);
+  color: black;
+  font-size: 1.1rem;
+}
+.textArea{
+  width: 350px;
+  padding: 10px;
+  align-self: center;
+  margin: 10px;
+}
+
+#root > div > div > div:nth-child(1){
+  display: none;
+}
